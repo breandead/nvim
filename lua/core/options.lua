@@ -55,6 +55,9 @@ opt.splitright = true
 opt.undofile = true
 
 -- set default windows shell to powershell
-if vim.fn.has('win32') or vim.fn.has('win64') then
+if vim.fn.has('win32') == 1 or vim.fn.has('win64') == 1 then
     opt.shell = 'powershell.exe'
+else
+    -- on linux will default to /bin/bash now
+    opt.shell = '/bin/bash'
 end
