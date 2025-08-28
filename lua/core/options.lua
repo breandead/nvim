@@ -1,5 +1,5 @@
 local opt = vim.o
--- Sets cursor to always be in the center
+-- Set cursor to always be in the center
 opt.scrolloff = 999
 
 -- Set highlight on search
@@ -41,7 +41,7 @@ opt.timeoutlen = 300
 
 opt.completeopt = 'menuone,noselect'
 
-vim.diagnostic.config({ virtual_text = false, virtual_lines = {current_line = true} })
+vim.diagnostic.config({ virtual_text = false, virtual_lines = true })
 
 opt.termguicolors = true
 
