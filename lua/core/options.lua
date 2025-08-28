@@ -14,9 +14,6 @@ opt.relativenumber = true
 -- Enable mouse mode
 opt.mouse = 'a'
 
--- Sync clipboard between OS and Neovim.
-opt.clipboard = 'unnamedplus'
-
 -- Indenting setting
 opt.expandtab = true
 opt.tabstop = 4

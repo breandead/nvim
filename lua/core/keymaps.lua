@@ -21,6 +21,14 @@ map({'n', 'v'}, '<Right>', 'g<<Right>', opts)
 map("x", "<leader>d", [["_d]], {desc="Delete to void register"})
 map({"n", "v"}, "<leader>y", [["+y]], {desc="Yank selection to system clipboard"})
 map("n", "<leader>Y", [["+Y]], {desc="Yank rest of line to system clipboard"})
+map("n", "<leader>p", [["+p]], {desc="paste from left of the cursor from system clipboard"})
+map("n", "<leader>Y", [["+P]], {desc="paste from right of the cursor from system clipboard"})
+
+vim.keymap.set("n", '""', function()
+  local current = vim.fn.getreg('"')
+  local newline = vim.api.nvim_get_current_line()
+  vim.fn.setreg('"', current .. newline .. "\n")
+end, { desc = "Append current line to unnamed register" })
 
 -- Better window sizing
 map("n", "<C-Left>",  ":vertical resize +2<CR>", opts)
