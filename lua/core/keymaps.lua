@@ -18,9 +18,8 @@ map({'n', 'v'}, '<Up>', 'g<Up>', opts)
 map({'n', 'v'}, '<Left>', 'g<<Left>', opts)
 map({'n', 'v'}, '<Right>', 'g<<Right>', opts)
 
-map("x", "<leader>d", [["_d]], {desc="Delete to void register"})
 map({"n", "v"}, "<leader>y", [["+y]], {desc="Yank selection to system clipboard"})
-map("n", "<leader>Y", [["+Y]], {desc="Yank rest of line to system clipboard"})
+map("n", "<leader>Y", [["+y$]], {desc="Yank rest of line to system clipboard"})
 map({"n", 'v'}, "<leader>p", [["+p]], {desc="paste from left of the cursor from system clipboard"})
 map({"n", 'v'}, "<leader>Y", [["+P]], {desc="paste from right of the cursor from system clipboard"})
 
