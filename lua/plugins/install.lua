@@ -3,9 +3,9 @@ require('lazy').setup({
     'folke/which-key.nvim',
     'lukas-reineke/indent-blankline.nvim',
     'numToStr/Comment.nvim',
-    "ellisonleao/gruvbox.nvim",
     'tpope/vim-fugitive',
-    "cbochs/grapple.nvim",
+    'cbochs/grapple.nvim',
+    'zootedb0t/citruszest.nvim',
 
     {
         "m4xshen/autoclose.nvim",
