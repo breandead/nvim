@@ -9,8 +9,8 @@ map("n", "J", "mzJ`z", opts)
 map("n", "n", "nzzzv", opts)
 map("n", "N", "Nzzzv", opts)
 
-map("n", "Y", "y$")
-map("n", "Q", "@q")
+map("n", "Y", "y$", opts)
+map("n", "Q", "@q", opts)
 
 -- Remap arrow keys for visual line movement in normal and visual modes
 map({'n', 'v'}, '<Down>', 'g<Down>', opts)
