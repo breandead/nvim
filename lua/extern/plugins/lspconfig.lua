@@ -1,9 +1,6 @@
 return {
     'neovim/nvim-lspconfig',
     dependencies = {
-        { 'mason-org/mason.nvim', opts = {} },
-        'mason-org/mason-lspconfig.nvim',
-        'WhoIsSethDaniel/mason-tool-installer.nvim',
         { 'j-hui/fidget.nvim', opts = {} },
     },
   config = function()
@@ -22,15 +19,6 @@ return {
         map('grd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
         map('grD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
         map('grt', require('telescope.builtin').lsp_type_definitions, '[G]oto [T]ype Definition')
-
-        map('gn', "]d", "Goto Next Error")
-        map('gN', "[d", "Goto Previous Error")
       end,
     })
-
-    local mason_lspconfig = require('mason-lspconfig')
-
-    mason_lspconfig.setup {
-      ensure_installed = { "lua_ls", "pyright" },
-    }
 end}

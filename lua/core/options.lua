@@ -27,9 +27,14 @@ opt.smartcase = true
 -- Keep signcolumn on by default
 vim.wo.signcolumn = 'yes'
 
--- Decrease update time
-opt.updatetime = 250
-opt.timeoutlen = 300
+vim.o.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+
+-- set timing
+opt.updatetime = 750
+opt.timeoutlen = 500
+
+opt.scrolloff = 10
 
 opt.completeopt = 'menuone,noselect'
 
