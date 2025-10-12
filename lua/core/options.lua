@@ -1,4 +1,7 @@
 local opt = vim.o
+
+opt.wrap = false
+
 -- Set highlight on search
 opt.hlsearch = false
 

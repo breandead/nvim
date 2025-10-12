@@ -12,12 +12,6 @@ map("n", "N", "Nzzzv", opts)
 map("n", "Y", "y$", opts)
 map("n", "Q", "@q", opts)
 
--- Remap arrow keys for visual line movement in normal and visual modes
-map({'n', 'v'}, '<Down>', 'g<Down>', opts)
-map({'n', 'v'}, '<Up>', 'g<Up>', opts)
-map({'n', 'v'}, '<Left>', 'g<<Left>', opts)
-map({'n', 'v'}, '<Right>', 'g<<Right>', opts)
-
 map({"n", "v"}, "<leader>y", [["+y]], {desc="Yank selection to system clipboard"})
 map("n", "<leader>Y", [["+y$]], {desc="Yank rest of line to system clipboard"})
 map({"n", 'v'}, "<leader>p", [["+p]], {desc="paste from left of the cursor from system clipboard"})

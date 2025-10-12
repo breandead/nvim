@@ -1,14 +1,9 @@
 local function setup_colorscheme()
-    require("citruszest").setup({
-        option = {
-            transparent = false,
-        },
-    })
-    vim.cmd("colorscheme citruszest")
+    vim.cmd("colorscheme nightfox")
 end
 
 return {
-  "zootedb0t/citruszest.nvim",
+  "EdenEast/nightfox.nvim",
   lazy = false,
   config = setup_colorscheme,
   priority = 1000,
