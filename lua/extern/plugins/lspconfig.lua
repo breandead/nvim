@@ -12,13 +12,13 @@ return {
           vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
         end
 
-        map('gr', vim.lsp.buf.rename, '[R]e[n]ame')
-        map('ga', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
-        map('grr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-        map('gi', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
-        map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
-        map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
-        map('gt', require('telescope.builtin').lsp_type_definitions, '[G]oto [T]ype Definition')
+        map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+        map('<leader>ga', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
+        map('<leader>gR', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+        map('<leader>gi', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
+        map('<leader>gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
+        map('<leader>gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+        map('<leader>gt', require('telescope.builtin').lsp_type_definitions, '[G]oto [T]ype Definition')
       end,
     })
 end}

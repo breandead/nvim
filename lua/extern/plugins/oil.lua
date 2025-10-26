@@ -1,6 +1,5 @@
 local function setup_oil()
     require("oil").setup()
-    vim.keymap.set("n", "<leader>fv", "<CMD>Oil<CR>", {desc = "Open Oil File Viewer"})
 end
 
 return {

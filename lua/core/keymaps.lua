@@ -12,16 +12,10 @@ map("n", "N", "Nzzzv", opts)
 map("n", "Y", "y$", opts)
 map("n", "Q", "@q", opts)
 
-map({"n", "v"}, "<leader>y", [["+y]], {desc="Yank selection to system clipboard"})
-map("n", "<leader>Y", [["+y$]], {desc="Yank rest of line to system clipboard"})
-map({"n", 'v'}, "<leader>p", [["+p]], {desc="paste from left of the cursor from system clipboard"})
-map({"n", 'v'}, "<leader>Y", [["+P]], {desc="paste from right of the cursor from system clipboard"})
-
-vim.keymap.set("n", '""', function()
-  local current = vim.fn.getreg('"')
-  local newline = vim.api.nvim_get_current_line()
-  vim.fn.setreg('"', current .. newline .. "\n")
-end, { desc = "Append current line to unnamed register" })
+map({"n", "v"}, "<leader>y", [["+y]], opts)
+map("n", "<leader>Y", [["+y$]], opts)
+map({"n", 'v'}, "<leader>p", [["+p]], opts)
+map({"n", 'v'}, "<leader>Y", [["+P]], opts)
 
 -- Better window sizing
 map("n", "<C-Left>",  ":vertical resize +2<CR>", opts)
@@ -32,12 +26,11 @@ map("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 -- saving binds
 map('n', "<leader>w", ':w<CR>')
 map('n', "<leader>q", ':q<CR>')
-map('n', "<leader>so", ':source<CR>')
 
 -- terminal binds
 map('n', "<leader>t", (function()
   vim.cmd('vsplit')
   vim.cmd('term')
   vim.cmd('startinsert')
-end))
+end), {desc = "Open terminal in vertical split"} )
 map('t', '<Esc><Esc>', [[<C-\><C-n>:q<CR>]], opts)

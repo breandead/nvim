@@ -35,7 +35,7 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- set timing
 opt.updatetime = 750
-opt.timeoutlen = 500
+opt.timeoutlen = 750
 
 opt.scrolloff = 10
 
