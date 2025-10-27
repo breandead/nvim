@@ -13,7 +13,7 @@ return {
         end
 
         map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
-        map('<leader>ga', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
+        map('<leader>ra', vim.lsp.buf.code_action, '[R]efactor [A]ction', { 'n', 'x' })
         map('<leader>gR', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
         map('<leader>gi', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
         map('<leader>gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
