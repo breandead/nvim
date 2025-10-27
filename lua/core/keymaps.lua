@@ -34,3 +34,48 @@ map('n', "<leader>t", (function()
   vim.cmd('startinsert')
 end), {desc = "Open terminal in vertical split"} )
 map('t', '<Esc><Esc>', [[<C-\><C-n>:q<CR>]], opts)
+
+-- keybinds to jump to error
+vim.keymap.set('n', '<leader>gn', function()
+    local next = vim.diagnostic.get_next({
+      wrap = false,
+      count = -1,
+      severity = {
+        vim.diagnostic.severity.WARN,
+        vim.diagnostic.severity.ERROR,
+      }
+    })
+    if next then
+      vim.diagnostic.jump({ diagnostic = next })
+    else
+      vim.diagnostic.jump({
+        count = -1,
+        severity = {
+          vim.diagnostic.severity.WARN,
+          vim.diagnostic.severity.ERROR,
+        },
+      })
+    end
+end, {desc = "[G]oto [N]ext diagnostic"})
+
+vim.keymap.set('n', '<leader>gp', function()
+    local next = vim.diagnostic.get_next({
+      wrap = false,
+      count = 1,
+      severity = {
+        vim.diagnostic.severity.WARN,
+        vim.diagnostic.severity.ERROR,
+      }
+    })
+    if next then
+      vim.diagnostic.jump({ diagnostic = next })
+    else
+      vim.diagnostic.jump({
+        count = 1,
+        severity = {
+          vim.diagnostic.severity.WARN,
+          vim.diagnostic.severity.ERROR,
+        },
+      })
+    end
+end, {desc = "[G]oto [P]revious diagnostic"})
