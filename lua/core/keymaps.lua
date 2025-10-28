@@ -27,14 +27,6 @@ map("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 map('n', "<leader>w", ':w<CR>')
 map('n', "<leader>q", ':q<CR>')
 
--- terminal binds
-map('n', "<leader>t", (function()
-  vim.cmd('vsplit')
-  vim.cmd('term')
-  vim.cmd('startinsert')
-end), {desc = "Open terminal in vertical split"} )
-map('t', '<Esc><Esc>', [[<C-\><C-n>:q<CR>]], opts)
-
 -- keybinds to jump to error
 vim.keymap.set('n', '<leader>gn', function()
     local next = vim.diagnostic.get_next({
